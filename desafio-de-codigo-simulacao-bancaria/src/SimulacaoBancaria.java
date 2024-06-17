@@ -21,8 +21,7 @@ public class SimulacaoBancaria {
                     double deposito = scanner.nextDouble();
                     if (deposito > 0) {
                         saldo += deposito;
-                        System.out.printf("Valor do depósitado: %.1f%n", deposito);
-                        System.out.printf("Saldo atual: %.1f%n", saldo);
+                        System.out.printf("Saldo atual: %.1f%n", deposito);
                     } else {
                         System.out.println("Valor de depósito inválido.");
                     }
@@ -33,7 +32,6 @@ public class SimulacaoBancaria {
                     double saque = scanner.nextDouble();
                     if (saque > 0 && saque <= saldo) {
                         saldo -= saque;
-                        System.out.printf("Seu saque foi de: %.1f%n", saque);
                         System.out.printf("Saldo atual: %.1f%n", saldo);
                     } else if (saque > saldo) {
                         System.out.println("Saldo insuficiente.");
@@ -49,6 +47,7 @@ public class SimulacaoBancaria {
                     System.out.println("Programa encerrado.");
                     continuar = false;  
                     break;
+                    
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
             }
